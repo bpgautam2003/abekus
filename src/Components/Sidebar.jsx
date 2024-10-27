@@ -42,24 +42,24 @@ export default function Sidebar({ Colleges, onSelectCollege }) {
     return (
         <ThemeProvider theme={theme}>
             <Box style={{ height: "100vh", borderRight: "1px solid #7B7B7B40", position: { sm: "fixed", lg: "relative" }}}>
-                {isMdOrLess && !isOpen && (
-                    <IconButton onClick={handleToggleSidebar}  style={{ color : "#ffffff", position : "fixed", top : "1rem"}}>
-                        <MenuIcon  size={40}/>
+                {isMdOrLess && (
+                    <IconButton onClick={handleToggleSidebar}  style={{ color : "#ffffff", position : "fixed", top : "0.5rem"}}>
+                        <MenuIcon fontSize="large"/>
                     </IconButton>
                 )}
 
                 {(!isMdOrLess || isOpen) && (
-                    <Box sx={{ width: 340, pt : 2 }}>
+                    <Box sx={{ width: {xs : 300, lg : 340}, pt : 2 }}>
                         <Box>
                             <Box sx={{ display: "flex", justifyContent: "space-between", pr: 2 }}>
                                 <Typography style={{ color: "black", paddingLeft: "1rem", margin: "10px 0" }}>
                                     AI Recommended Colleges
                                 </Typography>
-                                {isMdOrLess && isOpen && (
+                                {/* {isMdOrLess && isOpen && (
                                     <IconButton onClick={handleToggleSidebar}>
                                         <ArrowBackIosNewIcon />
                                     </IconButton>
-                                )}
+                                )} */}
                             </Box>
 
                             <Box>

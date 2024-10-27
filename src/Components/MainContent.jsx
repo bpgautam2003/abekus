@@ -71,7 +71,7 @@ const MainContent = ({ selectedCollege }) => {
             <Box>
 
                 <Typography variant={isSm ? "subtitle1" : "h6"} color="#25507B" sx={{ mb: 2 }}>Student’s Performance Matching Your Job Skills</Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, justifyContent : "center" }}>
                     {skillsData.map((skill, index) => (
                         <Box key={index}>
                             <PieChart skill={skill} />

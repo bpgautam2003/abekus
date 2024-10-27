@@ -89,7 +89,7 @@ const PieChart = ({ skill }) => {
             </Box>
             <Typography variant="subtitle2" style={{ textAlign: "center", marginBottom: "10px" }}>Number of students in each level.</Typography>
             <Box sx={{ position: 'relative', pt: '80%', pb : 2 , display : "flex", flexDirection : "column"}}>
-                    <canvas ref={chartRef} style={{ position: 'absolute', top:0, left: 0, width: '240px', height: '240px'}}></canvas>
+                    <canvas ref={chartRef} style={{ position: 'absolute', top:0, left: 0, width: '200px', height: '200px'}}></canvas>
 
                 <Box sx={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <Typography variant="h5" color="#25507B" fontWeight="bold">{skill.totalStudents}</Typography>
