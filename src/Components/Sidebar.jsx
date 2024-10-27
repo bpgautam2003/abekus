@@ -4,10 +4,10 @@ import { Box, Typography, IconButton } from '@mui/material'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import PersonIcon from '@mui/icons-material/Person'
 import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close';
 import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const theme = createTheme()
 
@@ -37,14 +37,21 @@ export default function Sidebar({ Colleges, onSelectCollege }) {
     const handleSelectCollege = (college) => {
         setActiveCollege(college)
         onSelectCollege(college)
+        setIsOpen(!isOpen)
+
     }
 
     return (
         <ThemeProvider theme={theme}>
             <Box style={{ height: "100vh", borderRight: "1px solid #7B7B7B40", position: { sm: "fixed", lg: "relative" }}}>
-                {isMdOrLess && (
+                {(isMdOrLess && !isOpen) && (
                     <IconButton onClick={handleToggleSidebar}  style={{ color : "#ffffff", position : "fixed", top : "0.5rem"}}>
                         <MenuIcon fontSize="large"/>
+                    </IconButton>
+                )}
+                {(isMdOrLess && isOpen) && (
+                    <IconButton onClick={handleToggleSidebar}  style={{ color : "#ffffff", position : "fixed", top : "0.5rem"}}>
+                        <CloseIcon fontSize="large"/>
                     </IconButton>
                 )}
 

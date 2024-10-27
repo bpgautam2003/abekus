@@ -53,7 +53,7 @@ const PieChart = ({ skill }) => {
                             datalabels: {
                                 color: '#000',
                                 formatter: (value, context) => {
-                                    return ` ${value}`; // Display label with value
+                                    return ` ${value}`; 
                                 }
                             }
                         },

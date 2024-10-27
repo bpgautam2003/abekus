@@ -1,4 +1,3 @@
-// components/AreaGraph.js
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -86,7 +85,7 @@ export default function Graph({selectedCollege}) {
       },
       y1: {
         type: 'linear',
-        display: false, // Hide y-axis for Accuracy
+        display: false, 
         position: 'right',
         grid: {
           drawOnChartArea: false,
@@ -101,7 +100,7 @@ export default function Graph({selectedCollege}) {
         callbacks: {
           label: function(context) {
             if (context.dataset.label === 'Accuracy (%)') {
-              return `Accuracy: ${context.raw}%`; // Display accuracy percentage on points only
+              return `Accuracy: ${context.raw}%`; 
             }
             return `${context.dataset.label}: ${context.raw}`;
           },
